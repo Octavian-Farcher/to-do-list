@@ -16,13 +16,14 @@ class NewToDoForm extends Component {
 
     onSubmit(evt) {
         evt.preventDefault()
-        this.props.addItem(this.state)
-        this.setState({ text: '', id: uuidv4(), completed: false })
-
-
+        if (this.state.text !== '') {
+            this.props.addItem(this.state)
+            this.setState({ text: '', id: uuidv4(), completed: false })
+        };
     }
+
     handleChange(evt) {
-        this.setState({ [evt.target.name]: evt.target.value })
+        this.setState({ [evt.target.name]: evt.target.value });
     }
 
     render() {
@@ -32,7 +33,7 @@ class NewToDoForm extends Component {
             <form className='NewTodoForm' onSubmit={this.onSubmit}>
                 <p>Write your todo's below...</p>
                 <div>
-                    <input onChange={this.handleChange} placeholder={'New ToDo'} name='text'></input>
+                    <input onChange={this.handleChange} value={this.state.text} placeholder={'New ToDo'} name='text'></input>
                     <button>Add Todo</button>
                 </div>
             </form>
