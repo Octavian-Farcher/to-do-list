@@ -1,0 +1,80 @@
+.Todo{
+    
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin: 10px -3rem 10px -5.5rem ;
+    padding: 1rem 2rem 1rem 5rem;
+    align-items: center;
+    background: rgba(255,255,255,0.1);
+}
+.Todo-task{
+position:relative;
+transition: opacity 0.4s linear;
+}
+
+li{
+    display: flex;
+    list-style-type: disc;
+    font-size :20px;
+    justify-content: space-between;
+  
+    
+
+}
+img{
+    margin-bottom: -3px;
+    height: 25px;
+    opacity:0.4;
+    padding-left: 5px;
+   
+
+}
+img:hover {
+    opacity:1.0;
+    cursor:pointer;
+    
+    
+}
+.Todo-task-completed{
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+/* Edit */
+.Todo-edit-form{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.Todo-edit-form label{
+flex-grow:1;
+border:none;
+background: #f7f1f1;
+padding: 0 1.5em;
+font-size: initial;
+}
+.Todo-edit-form button{
+    padding: 0 1.3rem;
+    border:none;
+    background: #ff6666;
+    color:white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid rgba(255,255,255,0.3);
+    margin-left:5px;
+    cursor: pointer;
+    transition: background 0.2s ease-out
+}
+
+.Todo-edit-form button:hover{
+    background: #ff5e5e;
+}
+.Todo-edit-form input,
+.Todo-edit-form button{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 3rem;
+}
+
+
+
